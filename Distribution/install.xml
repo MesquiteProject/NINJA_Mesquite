@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<mesquite>
+	<MessagesFromHome>
+		<version>1</version>
+		<notice><!-- NINJA install -->
+			<forVersion>272</forVersion>
+			<forBuildNumberAtLeast>527</forBuildNumberAtLeast>
+			<noticeNumber>1</noticeNumber>
+			<messageType>update</messageType>
+			<identity>NINJA</identity>
+			<updateVersion>001</updateVersion>
+			<packageName>NINJA v 1.0</packageName>
+			<explanation>
+			<![CDATA[<img src="http://mesquiteproject.org/packages/NINJA/splash.jpg"><p>
+			NINJA is a Mesquite package that uses Travis Wheeler's NINJA algorithm to construct neighbor-joining
+			trees from distance matrices.  
+			]]>
+			</explanation>
+				<install>
+					<location>mesquite</location>
+					<file>NINJA</file>
+					<url>http://mesquiteproject.org/packages/NINJA/mesquiteNINJA.zip</url>
+					<treatment>unzip</treatment>
+					<updateVersion>000</updateVersion>
+				</install>
+		</notice>
+	</MessagesFromHome>
+</mesquite>
