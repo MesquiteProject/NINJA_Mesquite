@@ -63,6 +63,12 @@ public class NeighborJoining extends TreeInferer implements Incrementable, com.t
     	 	else
     	 		return  super.doCommand(commandName, arguments, checker);
 	}
+    	 
+    	/*.................................................................................................................*/
+    	 public boolean isReconnectable(){
+    	 	return false;
+    	 }
+
 	/*.................................................................................................................*/
  	public void setCurrent(long i){  //SHOULD NOT notify (e.g., parametersChanged)
  		if (distanceTask instanceof Incrementable)
@@ -107,7 +113,7 @@ public class NeighborJoining extends TreeInferer implements Incrementable, com.t
    	}
    	
    	
-	public String getExtraTreeWindowCommands (){
+	public String getExtraTreeWindowCommands (boolean finalTree){
 
 		String commands = "setSize 400 600; ";
 		commands += " getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;\ntell It; ";
