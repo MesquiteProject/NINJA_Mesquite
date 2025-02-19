@@ -19,6 +19,8 @@ import com.traviswheeler.libs.Logger;
 
 import mesquite.lib.*;
 import mesquite.lib.duties.*;
+import mesquite.lib.tree.*;
+import mesquite.lib.taxa.*;
 import mesquite.distance.lib.*;
 
 /* ======================================================================== */
@@ -169,9 +171,9 @@ public class NeighborJoining extends TreeInferer implements Incrementable, com.t
   	
   	
 	/*.................................................................................................................*/
-  	public void fillTreeBlock(TreeVector treeList, int numberIfUnlimited){
+  	public int fillTreeBlock(TreeVector treeList, int numberIfUnlimited){
  		if (treeList==null)
-  			return;
+ 			return ResultCodes.INPUT_NULL;
    		Taxa taxa = treeList.getTaxa();
    		distanceTask.initialize(taxa);
    		MesquiteTimer timer = new MesquiteTimer();
@@ -196,6 +198,8 @@ public class NeighborJoining extends TreeInferer implements Incrementable, com.t
   		
 		treeList.setName("Trees from NINJA Neighbor-Joining analysis (Distance: " + distanceTask.getName() + ")");
 		treeList.setAnnotation ("Parameters: "  + getParameters() + ";   Distance: " + distanceTask.getParameters(), false);
+		
+		return ResultCodes.NO_ERROR;
 		
   	}
 	/*.................................................................................................................*/
