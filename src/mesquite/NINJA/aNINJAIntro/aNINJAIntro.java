@@ -10,7 +10,7 @@ package mesquite.NINJA.aNINJAIntro;
 
 import mesquite.lib.*;
 import mesquite.lib.duties.*;
-
+/*Nothing to see here, for sure. */
 /* ======================================================================== */
 public class aNINJAIntro extends PackageIntro {
 	/*.................................................................................................................*/
